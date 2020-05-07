@@ -2,8 +2,8 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "EnergieData"
-#define MyAppVersion "1.0.5"
-#define MyAppPublisher "Tijn Hoftijzer"
+#define MyAppVersion "-"
+#define MyAppPublisher "-"
 #define MyAppExeName "energiedata.exe"
 
 [Setup]
@@ -30,8 +30,8 @@ Name: "english"; MessagesFile: "compiler:Default.isl"
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 
 [Files]
-Source: "D:\Zonnepaneel\out\V1.0.5\energiedata-win32-x64\energiedata.exe"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Zonnepaneel\out\V1.0.5\energiedata-win32-x64\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "\energiedata.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "\energiedata\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Icons]
