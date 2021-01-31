@@ -1,6 +1,6 @@
 mixin button(text, target, size, sizeS)
-    - size = size || 1
-    - sizeS = sizeS || 3
+    - size = size || 2
+    - sizeS = sizeS || 4
     - classList = `col-${size} col-s-${sizeS}`
     a(href=target).button(class=classList)
         span= text

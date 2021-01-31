@@ -32,3 +32,17 @@ body {
 .noLink {
     text-decoration: none;
 }
+
+.card {
+    background-color: $secondary-color;
+    border-radius: 10%;
+}
+
+.highPadding {
+    padding: 10px;
+}
+
+.smallCard {
+    background-color: $secondary-color;
+    border-radius: 15%;
+}

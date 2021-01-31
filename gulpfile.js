@@ -39,6 +39,11 @@ function cleanTmp(cb) {
     }else cb()
 }
 
+function copyAssets() {
+    return src('src/assets/**/*')
+        .pipe(dest('docs/assets'))
+}
+
 exports.default = series(
     clean,
     parallel(
@@ -49,7 +54,8 @@ exports.default = series(
         series(
             transpileScss,
             minifyCss
-        )
+        ),
+        copyAssets
     ),
     cleanTmp
 )

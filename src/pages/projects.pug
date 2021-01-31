@@ -1,5 +1,23 @@
 extends mixins/template
 
 block content
-    div.center
-        h1.text Coming soon™
+    div.row
+        include mixins/project
+        +project(
+            'Worksnake', 
+            'Free open-source program that reminds you of taking breaks from your computer.', 
+            'https://github.com/Worksnake/worksnake/raw/master/build/icon.png', 
+            'https://github.com/Worksnake/worksnake',
+            'https://worksnake.js.org'
+        )
+        +project(
+            'EnergieData', 
+            'Collects data from Greenchoice (Energy Company) and Solaredge (Solar panels), merges it, and writes it to an excel document.', 
+            'https://raw.githubusercontent.com/112batman/EnergieData/master/assets/icon.ico',
+            'https://github.com/112batman/EnergieData',
+            'None'
+        )
+    div.row
+        a.col-12.col-s-12.noLink.center(href='https://github.com/112batman', target='_blank')
+            include mixins/badge
+            +badge('https://github.com/favicon.ico', 'View all my projects on Github', 48, 2000, true)

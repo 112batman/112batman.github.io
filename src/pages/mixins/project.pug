@@ -1,0 +1,17 @@
+mixin project(name, description, image, github, website)
+    div.col-6.col-s-12.card.center-text
+        h1.text= name
+        img(src=image, width='60%', height='60%')
+        br
+        br
+        span.text= description
+        br
+        br
+        div.center
+            include badge
+            a.col-4.col-s-6.noLink(href=github, target='_blank')
+                div.smallCard.max.highPadding(class='primary-bg')
+                    +badge('https://github.com/favicon.ico', 'View on Github', 48, 2000, true)
+            a.col-4.col-s-6.noLink(href=website, target='_blank')
+                div.smallCard.max.highPadding(class='primary-bg')
+                    +badge('assets/baseline_language_white_18dp.png', 'Website', 48, 2000, true)
