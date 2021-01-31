@@ -4,8 +4,8 @@ const GulpPug = require("gulp-pug");
 const fs = require('fs')
 
 function clean(cb) {
-    if(fs.existsSync('dist')) {
-        require('rimraf')('dist', cb)
+    if(fs.existsSync('docs')) {
+        require('rimraf')('docs', cb)
     }else cb()
 }
 
@@ -24,13 +24,13 @@ function transpileScss() {
 function minifyCss() {
     return src('tmp/css/**/*.css')
         .pipe(GulpCleanCss())
-        .pipe(dest('dist/css'))
+        .pipe(dest('docs/css'))
 }
 
 function minifyHtml() {
     return src('tmp/pages/**/*.html')
         .pipe(require('gulp-htmlmin')())
-        .pipe(dest('dist/pages'))
+        .pipe(dest('docs'))
 }
 
 function cleanTmp(cb) {
