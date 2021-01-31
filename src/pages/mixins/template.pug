@@ -1,0 +1,9 @@
+extends emptyPage
+block head
+    include header
+    +header
+block body
+    include navbar
+    +navbar
+    div.body#body
+        block content

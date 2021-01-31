@@ -1,0 +1,9 @@
+mixin badge(image, text, size, brighten, isChild)
+    - size = size || 48
+    - style = brighten ? `filter: brightness(${brighten}%); -webkit-filter: brightness(${brighten}%);` : ''
+    - isChild = isChild || false
+    - classList = isChild ? 'max' : 'col-2 col-s-4'
+    div.center-y(class=classList)
+        img(src=image, width=size, height=size, style=style)
+        br(style='margin-left: 5px;')
+        span.text= text

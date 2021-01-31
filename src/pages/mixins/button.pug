@@ -1,0 +1,6 @@
+mixin button(text, target, size, sizeS)
+    - size = size || 1
+    - sizeS = sizeS || 3
+    - classList = `col-${size} col-s-${sizeS}`
+    a(href=target).button(class=classList)
+        span= text

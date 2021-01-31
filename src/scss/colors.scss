@@ -1,0 +1,20 @@
+$primary-color: black;
+$secondary-color: #1e2233;
+$tritary-color: #191f2e;
+$text-color: white;
+
+.primary-bg {
+    background-color: $primary-color;
+}
+
+.primary {
+    color: $primary-color;
+}
+
+.secondary-bg {
+    background-color: $secondary-color;
+}
+
+.secondary {
+    color: $secondary-color;
+}
