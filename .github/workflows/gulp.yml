@@ -18,7 +18,7 @@ jobs:
       - name: Commit files
         run: |
           git config --local user.name "${{ github.actor }}"
-          git add .
+          git add docs -f
           git diff --quiet && git diff --staged --quiet || git commit -am "Run gulp"
       
       - name: Push changes
