@@ -4,12 +4,6 @@ block meta
     title Home
 
 block content
-    div.center
-        h1.text.pre
-            | Hello, 
-            | I'm 112batman
-    div.center
-        include mixins/badge
-        +badge('https://nodejs.org/static/images/favicons/favicon.ico', 'Hobbist nodejs developer')
-        a.col-2.col-s-2.noLink(href='https://github.com/112batman', target='_blank')
-            +badge('https://github.com/favicon.ico', 'View me on Github', 48, 2000, true)
+    div#readme
+        span Loading Github Readme...
+    script(src="assets/getReadme.js") 
